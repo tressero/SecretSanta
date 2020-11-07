@@ -1,12 +1,14 @@
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace SecretSanta.Data
 {
-    public class UserService
+    public class WeatherForecastService
     {
-        private static NUMBER_OF_USERS = 3;
-            
-        private static readonly int[] Pointers = new[]
+        private static readonly string[] Summaries = new[]
         {
-            for 
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
         public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
