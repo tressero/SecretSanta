@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mochsner/code/BlazorApp/BlazorApp.csproj",
+      "projectUniqueName": "/home/mochsner/code/Blazor/BlazorApp/BlazorApp.csproj",
       "projectName": "BlazorApp",
-      "projectPath": "/home/mochsner/code/BlazorApp/BlazorApp.csproj",
+      "projectPath": "/home/mochsner/code/Blazor/BlazorApp/BlazorApp.csproj",
       "packagesPath": "/home/mochsner/.nuget/packages/",
-      "outputPath": "/home/mochsner/code/BlazorApp/obj/",
+      "outputPath": "/home/mochsner/code/Blazor/BlazorApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mochsner/.nuget/NuGet/NuGet.Config"
