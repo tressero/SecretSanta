@@ -23,128 +23,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="270253ca-1888-45a7-b5a7-326b138a2d07" name="Default Changelist" comment="#1 - Initial SecretSanta">
-      <change afterPath="$PROJECT_DIR$/SecretSanta/App.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Data/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Data/WeatherForecastService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Pages/Counter.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Pages/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Pages/FetchData.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Pages/Index.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Pages/_Host.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/SecretSanta.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Shared/MainLayout.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Shared/NavMenu.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Shared/SurveyPrompt.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/_Imports.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.Views.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.Views.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/App.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/Pages/Counter.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/Pages/FetchData.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/Shared/MainLayout.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/Shared/NavMenu.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/Shared/SurveyPrompt.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/_Imports.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/App.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Counter.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/FetchData.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/SecretSanta.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/SecretSanta.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/NavMenu.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SurveyPrompt.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/_Imports.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.MvcApplicationPartsAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.RazorAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.RazorAssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.RazorComponent.input.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.RazorCoreGenerate.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.RazorTargetAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.RazorTargetAssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.TagHelpers.input.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.TagHelpers.output.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.Views.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.Views.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/staticwebassets/SecretSanta.StaticWebAssets.Manifest.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/staticwebassets/SecretSanta.StaticWebAssets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/SecretSanta.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/SecretSanta.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/SecretSanta.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/bootstrap/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/open-iconic/FONT-LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/open-iconic/ICON-LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/open-iconic/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/open-iconic/font/fonts/open-iconic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/open-iconic/font/fonts/open-iconic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/open-iconic/font/fonts/open-iconic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/open-iconic/font/fonts/open-iconic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/css/site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/wwwroot/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Blazor.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blazor.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/bin/Debug/netcoreapp3.1/BlazorApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/bin/Debug/netcoreapp3.1/BlazorApp.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/bin/Debug/netcoreapp3.1/BlazorApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/bin/Debug/netcoreapp3.1/BlazorApp.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/bin/Debug/netcoreapp3.1/BlazorApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/bin/Debug/netcoreapp3.1/BlazorApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/bin/Debug/netcoreapp3.1/BlazorApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/bin/Debug/netcoreapp3.1/BlazorApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/BlazorApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/BlazorApp.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/BlazorApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/BlazorApp.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/BlazorApp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/BlazorApp.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/BlazorApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/BlazorApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/BlazorApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/BlazorApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/App.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/App.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Pages/Counter.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Pages/Counter.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Pages/FetchData.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Pages/FetchData.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Shared/MainLayout.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Shared/NavMenu.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Shared/NavMenu.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Shared/SurveyPrompt.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/Shared/SurveyPrompt.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/_Imports.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/Razor/_Imports.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/RazorDeclaration/BlazorApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/RazorDeclaration/BlazorApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/RazorDeclaration/BlazorApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/Debug/netcoreapp3.1/RazorDeclaration/BlazorApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecretSanta/Data/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/Data/UserService.cs" afterDir="false" />
-    </list>
+    <list default="true" id="270253ca-1888-45a7-b5a7-326b138a2d07" name="Default Changelist" comment="#1 - SQLite Dependencies + DB generation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,6 +34,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/1D8/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -259,7 +139,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604768767086</updated>
-      <workItem from="1604768775097" duration="3586000" />
+      <workItem from="1604768775097" duration="3993000" />
     </task>
     <task id="LOCAL-00001" summary="#1 - Create Solution for Multiple Project Support">
       <created>1604768941234</created>
@@ -275,7 +155,28 @@
       <option name="project" value="LOCAL" />
       <updated>1604782118205</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="#1 - Initial SecretSanta">
+      <created>1604783122064</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604783122064</updated>
+    </task>
+    <task id="LOCAL-00004" summary="#1 - Initial SecretSanta with SQLite">
+      <created>1604783142383</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604783142383</updated>
+    </task>
+    <task id="LOCAL-00005" summary="#1 - SQLite Dependencies + DB generation">
+      <created>1604783173265</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604783173265</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +199,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="#1 - Create Solution for Multiple Project Support" />
     <MESSAGE value="#1 - Initial SecretSanta" />
-    <option name="LAST_COMMIT_MESSAGE" value="#1 - Initial SecretSanta" />
+    <MESSAGE value="#1 - Initial SecretSanta with SQLite" />
+    <MESSAGE value="#1 - SQLite Dependencies + DB generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1 - SQLite Dependencies + DB generation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="551" y="127" width="807" height="833" key="CommitChangelistDialog2" timestamp="1604781695493">
@@ -309,86 +212,86 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="743" y="298" width="424" height="491" key="FileChooserDialogImpl/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604768839155" />
-    <state width="1878" height="286" key="GridCell.Tab.0.bottom" timestamp="1604782047710">
+    <state width="1878" height="379" key="GridCell.Tab.0.bottom" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="286" key="GridCell.Tab.0.bottom/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604782047710" />
-    <state width="1878" height="286" key="GridCell.Tab.0.center" timestamp="1604782047710">
+    <state width="1878" height="379" key="GridCell.Tab.0.bottom/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.0.center" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="286" key="GridCell.Tab.0.center/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604782047710" />
-    <state width="1878" height="286" key="GridCell.Tab.0.left" timestamp="1604782047710">
+    <state width="1878" height="379" key="GridCell.Tab.0.center/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.0.left" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="286" key="GridCell.Tab.0.left/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604782047710" />
-    <state width="1878" height="286" key="GridCell.Tab.0.right" timestamp="1604782047710">
+    <state width="1878" height="379" key="GridCell.Tab.0.left/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.0.right" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="286" key="GridCell.Tab.0.right/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604782047710" />
-    <state width="1878" height="379" key="GridCell.Tab.1.bottom" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.0.right/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.1.bottom" timestamp="1604783065730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.1.bottom/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.1.center" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.1.bottom/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065730" />
+    <state width="1878" height="379" key="GridCell.Tab.1.center" timestamp="1604783065730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.1.center/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.1.left" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.1.center/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065730" />
+    <state width="1878" height="379" key="GridCell.Tab.1.left" timestamp="1604783065730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.1.left/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.1.right" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.1.left/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065730" />
+    <state width="1878" height="379" key="GridCell.Tab.1.right" timestamp="1604783065730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.1.right/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.2.bottom" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.1.right/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065730" />
+    <state width="1878" height="379" key="GridCell.Tab.2.bottom" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.2.bottom/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.2.center" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.2.bottom/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.2.center" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.2.center/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.2.left" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.2.center/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.2.left" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.2.left/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.2.right" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.2.left/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.2.right" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.2.right/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.3.bottom" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.2.right/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.3.bottom" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.3.bottom/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.3.center" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.3.bottom/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.3.center" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.3.center/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.3.left" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.3.center/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.3.left" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.3.left/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.3.right" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.3.left/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.3.right" timestamp="1604783065729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.3.right/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.4.bottom" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.3.right/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065729" />
+    <state width="1878" height="379" key="GridCell.Tab.4.bottom" timestamp="1604783065730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.4.bottom/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.4.center" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.4.bottom/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065730" />
+    <state width="1878" height="379" key="GridCell.Tab.4.center" timestamp="1604783065730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.4.center/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.4.left" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.4.center/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065730" />
+    <state width="1878" height="379" key="GridCell.Tab.4.left" timestamp="1604783065730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.4.left/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
-    <state width="1878" height="379" key="GridCell.Tab.4.right" timestamp="1604781444744">
+    <state width="1878" height="379" key="GridCell.Tab.4.left/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065730" />
+    <state width="1878" height="379" key="GridCell.Tab.4.right" timestamp="1604783065730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="379" key="GridCell.Tab.4.right/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604781444744" />
+    <state width="1878" height="379" key="GridCell.Tab.4.right/1920.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604783065730" />
     <state x="555" y="275" width="800" height="537" key="Rider.ProjectTemplateDialog.Size" timestamp="1604781375813">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
