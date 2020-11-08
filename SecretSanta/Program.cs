@@ -9,50 +9,66 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using SecretSanta.Data.Models;
+
 namespace SecretSanta
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            var connectionStringBuilder = new SqliteConnectionStringBuilder();
-            connectionStringBuilder.DataSource = "./myDb.db";
-
-            using (var connection = new SqliteConnection(connectionStringBuilder.ConnectionString))
+            using (var db = new SecretSantaContext())
             {
-                connection.Open();
-
-                //Create Table
-                var tableCmd = connection.CreateCommand();
-                tableCmd.CommandText = "CREATE TABLE users(name VARCHAR(50));";
-                tableCmd.ExecuteNonQuery();
-
-                //Insert Some Records
-                using (var transaction = connection.BeginTransaction())
+                // Create Users
+                Console.WriteLine("Inserting new users");
+                db.Add(new User
                 {
-                    var insertCmd = connection.CreateCommand();
-                    insertCmd.CommandText = "INSERT INTO users VALUES('West Russell')";
-                    insertCmd.ExecuteNonQuery();
-                    insertCmd.CommandText = "INSERT INTO users VALUES('Ann-Marie Thompson')";
-                    insertCmd.ExecuteNonQuery();
-                    insertCmd.CommandText = "INSERT INTO users VALUES('Jordan Wayburn')";
-                    insertCmd.ExecuteNonQuery();
-
-                    transaction.Commit();
-                }
-
-                //Read Records
-                var selectCmd = connection.CreateCommand();
-                selectCmd.CommandText = "SELECT * FROM users";
-                using (var reader = selectCmd.ExecuteReader())
+                    UserId =  1,
+                    FirstName = "Marc",
+                    LastName = "Ochsner",
+                    Email = "testemail@gmail.com",
+                });
+                db.Add(new User
                 {
-                    while (reader.Read())
-                    {
-                        var result = reader.GetString(0);
-                        Console.WriteLine(result);
-                    }
-                }
+                    UserId =  2,
+                    FirstName = "Ann-Marie",
+                    LastName = "Thompson",
+                    Email = "testemail@gmail.com",
+                });
+                db.Add(new User
+                {
+                    UserId =  3,
+                    FirstName = "Jordan",
+                    LastName = "Wayburn",
+                    Email = "testemail@gmail.com",
+                });
+                db.SaveChanges();
+
+                // Read
+                Console.WriteLine("Querying Users");
+                var user = db.Users
+                    .OrderBy(b => b.UserId)
+                    .First();
+
+                // Update
+                Console.WriteLine("Updating by adding a Present");
+                user.Presents.Add (new Present
+                {
+                    PresentId = 1,
+                    Date = DateTime.Today,
+                    Url = "https://www.amazon.com/8-0-NET-Core-3-0-Cross-Platform/dp/1788478126/ref=sr_1_1_sspa?dchild=1&keywords=entity+framework&qid=1604820888&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzQTI3MUQ3VkFXOTU1JmVuY3J5cHRlZElkPUEwODA0Njk3Mzk5T1dHWjBDMUdONiZlbmNyeXB0ZWRBZElkPUEwMTk5Mzc0M0QxOTROUDFLMEtEWiZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=",
+                    Price = "39.99"
+                });
+
+                db.SaveChanges();
+
+                // Delete User
+                Console.WriteLine("Delete the first user");
+                db.Remove(user);
+                db.SaveChanges();
             }
+            
             CreateHostBuilder(args).Build().Run();
         }
 

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SecretSanta.Data.Models
 {
-    public class MyContext : DbContext
+    public class SecretSantaContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Present> Presents { get; set; }
