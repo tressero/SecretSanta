@@ -75,6 +75,11 @@
           <e p="WeatherForecast.cs" t="Include" />
           <e p="WeatherForecastService.cs" t="Include" />
         </e>
+        <e p="Migrations" t="Include">
+          <e p="20201108072155_InitialCreate.Designer.cs" t="Include" />
+          <e p="20201108072155_InitialCreate.cs" t="Include" />
+          <e p="MyContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="Model.cs" t="Include" />
         <e p="Pages" t="Include">
           <e p="Counter.razor" t="Include" />
@@ -88,6 +93,7 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="SecretSanta.csproj" t="IncludeRecursive" />
+        <e p="SecretSantaDB.db" t="Include" />
         <e p="Shared" t="Include">
           <e p="MainLayout.razor" t="Include" />
           <e p="NavMenu.razor" t="Include" />
