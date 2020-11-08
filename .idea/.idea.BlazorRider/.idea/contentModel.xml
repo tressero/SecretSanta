@@ -71,21 +71,20 @@
       <e p="BlazorRider.sln" t="IncludeFlat" />
       <e p="SecretSanta" t="IncludeRecursive">
         <e p="App.razor" t="Include" />
-        <e p="Data" t="Include">
-          <e p="WeatherForecast.cs" t="Include" />
-          <e p="WeatherForecastService.cs" t="Include" />
-        </e>
         <e p="Migrations" t="Include">
-          <e p="20201108075034_InitialCreate.Designer.cs" t="Include" />
-          <e p="20201108075034_InitialCreate.cs" t="Include" />
+          <e p="20201108082210_InitialCreate.Designer.cs" t="Include" />
+          <e p="20201108082210_InitialCreate.cs" t="Include" />
           <e p="SecretSantaContextModelSnapshot.cs" t="Include" />
         </e>
-        <e p="Model.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Present.cs" t="Include" />
+          <e p="SecretSantaContext.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
         <e p="Pages" t="Include">
-          <e p="Counter.razor" t="Include" />
           <e p="Error.cshtml" t="Include" />
-          <e p="FetchData.razor" t="Include" />
           <e p="Index.razor" t="Include" />
+          <e p="RecipientInfo.razor" t="Include" />
           <e p="_Host.cshtml" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />

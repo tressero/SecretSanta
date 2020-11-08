@@ -10,7 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
-using SecretSanta.Data.Models;
+using SecretSanta.Models;
 
 namespace SecretSanta
 {
@@ -24,27 +24,24 @@ namespace SecretSanta
                 Console.WriteLine("Inserting new users");
                 db.Add(new User
                 {
-                    UserId =  1,
                     FirstName = "Marc",
                     LastName = "Ochsner",
                     Email = "testemail@gmail.com",
-                    RecipientId = 2
+                    RecipientId = 11
                 });
                 db.Add(new User
                 {
-                    UserId =  2,
                     FirstName = "Ann-Marie",
                     LastName = "Thompson",
                     Email = "testemail@gmail.com",
-                    RecipientId = 3
+                    RecipientId = 12
                 });
                 db.Add(new User
                 {
-                    UserId =  3,
                     FirstName = "Jordan",
                     LastName = "Wayburn",
                     Email = "testemail@gmail.com",
-                    RecipientId = 1
+                    RecipientId = 13
                 });
                 db.SaveChanges();
 
@@ -53,12 +50,12 @@ namespace SecretSanta
                 var user = db.Users
                     .OrderBy(b => b.UserId)
                     .First();
+                Console.WriteLine(user.UserId);
 
                 // Update
                 Console.WriteLine("Updating by adding a Present");
                 user.Presents.Add (new Present
                 {
-                    PresentId = 1,
                     Date = DateTime.Today,
                     Url = "https://www.amazon.com/8-0-NET-Core-3-0-Cross-Platform/dp/1788478126/ref=sr_1_1_sspa?dchild=1&keywords=entity+framework&qid=1604820888&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzQTI3MUQ3VkFXOTU1JmVuY3J5cHRlZElkPUEwODA0Njk3Mzk5T1dHWjBDMUdONiZlbmNyeXB0ZWRBZElkPUEwMTk5Mzc0M0QxOTROUDFLMEtEWiZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=",
                     Price = "39.99"
@@ -67,9 +64,9 @@ namespace SecretSanta
                 db.SaveChanges();
 
                 // Delete User
-                Console.WriteLine("Delete the first user");
-                db.Remove(user);
-                db.SaveChanges();
+                // Console.WriteLine("Delete the first user");
+                // db.Remove(user);
+                // db.SaveChanges();
             }
             
             CreateHostBuilder(args).Build().Run();

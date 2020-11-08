@@ -1,0 +1,74 @@
+﻿@page "/recipientinfo"
+
+@using SecretSanta.Models
+@* @inject User User *@
+@* @inject Present Present *@
+
+<h1>Recipient</h1>
+
+<p>This component demonstrates fetching a target user and their associated presents they're interested in.</p>
+
+@if (_presents == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Date Added</th>
+            <th>Price</th>
+            <th>Url</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var present in _presents)
+        {
+            <tr>
+                <td>@present.Date.ToShortDateString()</td>
+                <td>@present.Price</td>
+                <td>@present.Url</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private User _myUser;
+    private User _recipientUser;
+    private List<Present> _presents;
+
+    protected override async Task OnInitializedAsync()
+    {
+        GetPresents();
+    }
+
+    private void GetPresents()
+    {
+        using (var db = new SecretSantaContext())
+        {
+            _presents = db.Presents
+                        .OrderBy(b => b.User)
+                        .ToList();            
+        }
+    }
+
+}
+
+@*
+ using (var db = new SecretSantaContext())
+            {
+                // Create Users
+                Console.WriteLine("Inserting new users");
+                db.Add(new User
+                {
+                    FirstName = "Marc",
+                    LastName = "Ochsner",
+                    Email = "testemail@gmail.com",
+                    RecipientId = 11
+                });
+*@

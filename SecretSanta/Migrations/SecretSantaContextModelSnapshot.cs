@@ -3,7 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SecretSanta.Data.Models;
+using SecretSanta.Models;
 
 namespace SecretSanta.Migrations
 {
@@ -16,7 +16,7 @@ namespace SecretSanta.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.9");
 
-            modelBuilder.Entity("SecretSanta.Data.Models.Present", b =>
+            modelBuilder.Entity("SecretSanta.Models.Present", b =>
                 {
                     b.Property<int>("PresentId")
                         .ValueGeneratedOnAdd()
@@ -44,7 +44,7 @@ namespace SecretSanta.Migrations
                     b.ToTable("Presents");
                 });
 
-            modelBuilder.Entity("SecretSanta.Data.Models.User", b =>
+            modelBuilder.Entity("SecretSanta.Models.User", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
@@ -67,9 +67,9 @@ namespace SecretSanta.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("SecretSanta.Data.Models.Present", b =>
+            modelBuilder.Entity("SecretSanta.Models.Present", b =>
                 {
-                    b.HasOne("SecretSanta.Data.Models.User", "User")
+                    b.HasOne("SecretSanta.Models.User", "User")
                         .WithMany("Presents")
                         .HasForeignKey("UserId");
                 });

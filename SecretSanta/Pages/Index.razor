@@ -1,7 +1,44 @@
 ﻿@page "/"
+@using SecretSanta.Models
+@using Microsoft.EntityFrameworkCore
 
-<h1>Hello, world!</h1>
+<h1>Hello @if (User_ != null)
+          {
+              @(User_.FirstName + " " + User_.LastName)
+          }!</h1>
 
-Welcome to your new app.
+Welcome to your Secret Santa Profile. These are the items that you have on your list.
 
-<SurveyPrompt Title="How is Blazor working for you?"/>
+@code
+{
+    User User_ = null;
+    protected override async Task OnInitializedAsync()
+    {
+        var query = GetUser();
+        query.Wait();
+        User_ = query.Result;
+    }
+
+    private static async Task<User> GetUser()
+    {
+        User _user = null;
+
+        using (var context = new SecretSantaContext())
+        {
+            _user = await (context.Users.Where(u => u.UserId == 1).FirstOrDefaultAsync<User>());
+            // Guide for async LINQ: https://www.entityframeworktutorial.net/entityframework6/async-query-and-save.aspx
+        }
+
+        return _user;
+    }
+    
+    private static async Task SaveUser(User editedUser)
+    {
+        using (var context = new SecretSantaContext())
+        {
+            context.Entry(editedUser).State = EntityState.Modified;
+            int x = await (context.SaveChangesAsync());
+        }
+    }
+}
+

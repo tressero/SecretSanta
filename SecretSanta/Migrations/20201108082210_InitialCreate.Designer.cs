@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SecretSanta.Data.Models;
+using SecretSanta.Models;
 
 namespace SecretSanta.Migrations
 {
     [DbContext(typeof(SecretSantaContext))]
-    [Migration("20201108075034_InitialCreate")]
+    [Migration("20201108082210_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,7 +18,7 @@ namespace SecretSanta.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.9");
 
-            modelBuilder.Entity("SecretSanta.Data.Models.Present", b =>
+            modelBuilder.Entity("SecretSanta.Models.Present", b =>
                 {
                     b.Property<int>("PresentId")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace SecretSanta.Migrations
                     b.ToTable("Presents");
                 });
 
-            modelBuilder.Entity("SecretSanta.Data.Models.User", b =>
+            modelBuilder.Entity("SecretSanta.Models.User", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
@@ -69,9 +69,9 @@ namespace SecretSanta.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("SecretSanta.Data.Models.Present", b =>
+            modelBuilder.Entity("SecretSanta.Models.Present", b =>
                 {
-                    b.HasOne("SecretSanta.Data.Models.User", "User")
+                    b.HasOne("SecretSanta.Models.User", "User")
                         .WithMany("Presents")
                         .HasForeignKey("UserId");
                 });
