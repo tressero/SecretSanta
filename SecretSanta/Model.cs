@@ -31,6 +31,10 @@ namespace SecretSanta.Data.Models
         public string LastName { get; set; }
         public string Email { get; set; }
         public virtual List<Present> Presents { get; } = new List<Present>();
+        
+        // [ForeignKey("UserId")]
+        // public virtual User RecipientId { get; set; }
+        public int RecipientId { get; set; }
     }
     
     public class Present

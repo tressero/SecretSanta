@@ -28,6 +28,7 @@ namespace SecretSanta
                     FirstName = "Marc",
                     LastName = "Ochsner",
                     Email = "testemail@gmail.com",
+                    RecipientId = 2
                 });
                 db.Add(new User
                 {
@@ -35,6 +36,7 @@ namespace SecretSanta
                     FirstName = "Ann-Marie",
                     LastName = "Thompson",
                     Email = "testemail@gmail.com",
+                    RecipientId = 3
                 });
                 db.Add(new User
                 {
@@ -42,6 +44,7 @@ namespace SecretSanta
                     FirstName = "Jordan",
                     LastName = "Wayburn",
                     Email = "testemail@gmail.com",
+                    RecipientId = 1
                 });
                 db.SaveChanges();
 

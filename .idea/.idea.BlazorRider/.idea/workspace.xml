@@ -24,12 +24,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="270253ca-1888-45a7-b5a7-326b138a2d07" name="Default Changelist" comment="#8 - EF Design">
-      <change afterPath="$PROJECT_DIR$/BlazorRider.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Tools.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/Migrations/20201108072155_InitialCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/Migrations/20201108074622_InitialCreate.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/Migrations/20201108072155_InitialCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/Migrations/20201108074622_InitialCreate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/Migrations/MyContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/Migrations/SecretSantaContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SecretSanta/Model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/Model.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SecretSanta/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/SecretSanta.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/SecretSanta.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/bin/Debug/netcoreapp3.1/SecretSanta.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/SecretSanta.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/SecretSanta.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/SecretSanta.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/RazorDeclaration/SecretSanta.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +66,8 @@
         <option value="$PROJECT_DIR$/SecretSanta/Data/Models/Present.cs" />
         <option value="$PROJECT_DIR$/SecretSanta/Data/Models/User.cs" />
         <option value="$PROJECT_DIR$/SecretSanta/Data/Models/DbContext.cs" />
-        <option value="$PROJECT_DIR$/SecretSanta/Model.cs" />
         <option value="$PROJECT_DIR$/SecretSanta/Tools.cs" />
+        <option value="$PROJECT_DIR$/SecretSanta/Model.cs" />
         <option value="$PROJECT_DIR$/SecretSanta/Program.cs" />
       </list>
     </option>
@@ -153,7 +166,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604768767086</updated>
-      <workItem from="1604768775097" duration="10792000" />
+      <workItem from="1604768775097" duration="11303000" />
     </task>
     <task id="LOCAL-00001" summary="#1 - Create Solution for Multiple Project Support">
       <created>1604768941234</created>
