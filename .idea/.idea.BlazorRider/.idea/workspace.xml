@@ -23,13 +23,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="270253ca-1888-45a7-b5a7-326b138a2d07" name="Default Changelist" comment="#1 - SQLite Dependencies + DB generation">
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Data/Models/DbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Data/Models/Present.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecretSanta/Data/Models/User.cs" afterDir="false" />
+    <list default="true" id="270253ca-1888-45a7-b5a7-326b138a2d07" name="Default Changelist" comment="#8 - EF Design">
+      <change afterPath="$PROJECT_DIR$/SecretSanta/obj/SecretSanta.csproj.EntityFrameworkCore.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorRider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorApp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/Data/Models/DbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/Model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/Data/Models/Present.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/Data/Models/User.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/SecretSanta.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/SecretSanta.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/Debug/netcoreapp3.1/SecretSanta.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/SecretSanta.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/SecretSanta.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/SecretSanta.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/SecretSanta.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +61,11 @@
         <option value="$PROJECT_DIR$/BlazorRider.sln" />
         <option value="$PROJECT_DIR$/SecretSanta/Program.cs" />
         <option value="$PROJECT_DIR$/SecretSanta/Data/UserService.cs" />
-        <option value="$PROJECT_DIR$/SecretSanta/Data/Models/User.cs" />
-        <option value="$PROJECT_DIR$/SecretSanta/Data/Models/Present.cs" />
-        <option value="$PROJECT_DIR$/SecretSanta/Data/Models/DbContext.cs" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/SecretSanta/Data/Models/Present.cs" />
+        <option value="$PROJECT_DIR$/SecretSanta/Data/Models/User.cs" />
+        <option value="$PROJECT_DIR$/SecretSanta/Data/Models/DbContext.cs" />
+        <option value="$PROJECT_DIR$/SecretSanta/Model.cs" />
       </list>
     </option>
   </component>
@@ -151,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604768767086</updated>
-      <workItem from="1604768775097" duration="7941000" />
+      <workItem from="1604768775097" duration="9578000" />
     </task>
     <task id="LOCAL-00001" summary="#1 - Create Solution for Multiple Project Support">
       <created>1604768941234</created>
@@ -188,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604783173265</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="#8 - EF Design">
+      <created>1604805811787</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604805811787</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +233,8 @@
     <MESSAGE value="#1 - Initial SecretSanta" />
     <MESSAGE value="#1 - Initial SecretSanta with SQLite" />
     <MESSAGE value="#1 - SQLite Dependencies + DB generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="#1 - SQLite Dependencies + DB generation" />
+    <MESSAGE value="#8 - EF Design" />
+    <option name="LAST_COMMIT_MESSAGE" value="#8 - EF Design" />
   </component>
   <component name="WindowStateProjectService">
     <state x="551" y="127" width="807" height="833" key="CommitChangelistDialog2" timestamp="1604781695493">

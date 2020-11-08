@@ -72,14 +72,10 @@
       <e p="SecretSanta" t="IncludeRecursive">
         <e p="App.razor" t="Include" />
         <e p="Data" t="Include">
-          <e p="Models" t="Include">
-            <e p="DbContext.cs" t="Include" />
-            <e p="Present.cs" t="Include" />
-            <e p="User.cs" t="Include" />
-          </e>
           <e p="WeatherForecast.cs" t="Include" />
           <e p="WeatherForecastService.cs" t="Include" />
         </e>
+        <e p="Model.cs" t="Include" />
         <e p="Pages" t="Include">
           <e p="Counter.razor" t="Include" />
           <e p="Error.cshtml" t="Include" />
