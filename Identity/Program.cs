@@ -8,11 +8,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
-using SecretSanta.Models;
 
-namespace SecretSanta
+namespace Identity
 {
     public class Program
     {
@@ -23,10 +20,6 @@ namespace SecretSanta
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureAppConfiguration((hostingContext, config) =>
-                {
-                    config.AddEnvironmentVariables();
-                })
                 .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
     }
 }

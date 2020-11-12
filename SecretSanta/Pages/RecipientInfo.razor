@@ -1,6 +1,7 @@
 ﻿@page "/recipientinfo"
 
 @using SecretSanta.Models
+@using Microsoft.EntityFrameworkCore
 @* @inject User User *@
 @* @inject Present Present *@
 
@@ -49,9 +50,9 @@ else
 
     private void GetPresents()
     {
-        using (var db = new SecretSantaContext())
+        using (var context = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
         {
-            _presents = db.Presents
+            _presents = context.Presents
                         .OrderBy(b => b.User)
                         .ToList();            
         }

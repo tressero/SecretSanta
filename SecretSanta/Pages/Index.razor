@@ -1,13 +1,17 @@
-﻿@page "/"
+﻿@page "/home"
 @using SecretSanta.Models
 @using Microsoft.EntityFrameworkCore
 
-<h1>Hello @if (User_ != null)
-          {
-              @(User_.FirstName + " " + User_.LastName)
-          }!</h1>
-
-Welcome to your Secret Santa Profile. These are the items that you have on your list.
+<AuthorizeView>
+    <Authorized>
+        <h1>Hello @if (User_ != null)
+                  {
+                      @(User_.FirstName + " " + User_.LastName)
+                  }!</h1>
+        
+        Welcome to your Secret Santa Profile. These are the items that you have on your list.
+    </Authorized>
+</AuthorizeView>
 
 @code
 {
@@ -23,7 +27,7 @@ Welcome to your Secret Santa Profile. These are the items that you have on your 
     {
         User _user = null;
 
-        using (var context = new SecretSantaContext())
+        using (var context = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
         {
             _user = await (context.Users.Where(u => u.UserId == 1).FirstOrDefaultAsync<User>());
             // Guide for async LINQ: https://www.entityframeworktutorial.net/entityframework6/async-query-and-save.aspx
@@ -34,7 +38,7 @@ Welcome to your Secret Santa Profile. These are the items that you have on your 
     
     private static async Task SaveUser(User editedUser)
     {
-        using (var context = new SecretSantaContext())
+        using (var context = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
         {
             context.Entry(editedUser).State = EntityState.Modified;
             int x = await (context.SaveChangesAsync());
