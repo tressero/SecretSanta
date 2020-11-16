@@ -9,8 +9,8 @@ namespace SecretSanta.Models
         public DateTime Date { get; set; }
        
         public string Url { get; set; }
-        public string Price { get; set; }
-        public byte[] Image { get; set; }
+        public string? Price { get; set; }
+        public byte[]? Image { get; set; }
        
         [ForeignKey("UserId")]
         public virtual User User { get; set; }

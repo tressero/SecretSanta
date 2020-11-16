@@ -1,0 +1,25 @@
+﻿@page "/"
+@using SecretSanta.Models
+@using Microsoft.EntityFrameworkCore
+@using SecretSanta.Controllers
+@using SecretSanta
+@using Microsoft.AspNetCore.DataProtection
+
+<AuthorizeView>
+    <Authorized>
+        @*TODO: More on authenticated redirects here: https://stackoverflow.com/questions/60840986/blazor-redirect-to-login-if-user-is-not-authenticated *@
+        <LoginDisplay/>
+    </Authorized>
+    <NotAuthorized>
+        <h3>Hello! Welcome to Phishtank's Secret Santa app 🎅</h3>
+        <h5>Please Register or create an account!</h5>
+        <LoginDisplay/>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code
+{
+    
+}
+
