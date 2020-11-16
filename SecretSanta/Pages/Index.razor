@@ -2,16 +2,18 @@
 @using SecretSanta.Models
 @using Microsoft.EntityFrameworkCore
 
-
 <AuthorizeView>
     <Authorized>
-        <h1>Hello @if (User_ != null)
-                  {
-                      @(User_.FirstName + " " + User_.LastName)
-                  }!</h1>
-        
+
+        <h1>Hello
+            @if (User_ != null)
+            {
+                @(User_.FirstName + " " + User_.LastName)
+            }
+            !</h1>
+
         <ModifiableList/>
-        
+
     </Authorized>
 </AuthorizeView>
 

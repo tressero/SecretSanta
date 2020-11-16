@@ -11,61 +11,140 @@
 
 <AuthorizeView>
     <Authorized>
+        <style>
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    </style>
+
+        
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn" onclick="LoadModal();">Add Wish List Item</button>
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Price ($):</label>
+                    <input type="text" class="form-control" @bind="newPresent_Price" id="newPresent_Price">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">URL:</label>
+                    <textarea class="form-control" @bind="newPresent_Url" id="newPresent_Url"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" @onclick="NewPresent" data-dismiss="modal">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- SUBMIT MODAL -->
+            <input type="submit" class="btn" value="Submit"/>
+        </div>
+        
         <table class="table">
             <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Price</th>
-                    <th>Url</th>
-                    <th>Edit</th>
-                </tr>
+            <tr>
+                <th>ID</th>
+                <th>Price</th>
+                <th>Url</th>
+                <th>Delete</th>
+            </tr>
             </thead>
             <tbody>
             @{
                 var _identityName = context.User.Identity.Name;
+                IdentityName = _identityName;
                 var _presentObjs = LoadFormData(_identityName);
 
                 int x = 123;
                 @foreach (var instance in _presentObjs)
                 {
+                    var _instance = instance;
                     x += 1;
-                    if (instance.IsEditing)
+                    if (_instance.IsEditing)
                     {
-                            <tr>
-                                <EditForm Model="_presentModel" @*OnValidSubmit="ValidateFields()"*@ Context="@x">
-                                        <DataAnnotationsValidator />
-                                        <ValidationSummary />
-                                    <th scope="row">@instance.PresentId</th>
-                                    <td>
-                                        <input @bind-value="instance.Price" @bind:event="oninput" type="text" class="form-control" placeholder="Give the present a price (approx)."/>
-                                    </td>
-                                    <td>
-                                        <input @bind-value="instance.Url" type="text" class="form-control" placeholder="Link out to a URL of the present."/>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-link" @onclick="() => EnableEditing(false, instance)">
-                                            Edit
-                                        </button>
-                                        <button type="submit" class="btn btn-link" @onclick="() => UpdateInstance(instance)">
-                                            Update
-                                        </button>
-                                    </td>
-                                </EditForm>
-                            </tr>
+                        <tr>
+                            <th scope="row">@_instance.PresentId</th>
+                            <td>
+                                <input @bind-value="_instance.Price" type="text" class="form-control" placeholder="Give the present a price (approx)."/>
+                            </td>
+                            <td>
+                                <input @bind-value="_instance.Url" type="text" class="form-control" placeholder="Link out to a URL of the present."/>
+                            </td>
+                            <td>
+                                @* <button type="button" class="btn btn-link" @onclick="() => EnableEditing(false, _instance)"> *@
+                                @*     Edit *@
+                                @* </button> *@
+                                @* <button type="submit" class="btn btn-link" @onclick="() => UpdateInstance(_instance)"> *@
+                                @*     Update *@
+                                @* </button> *@
+                                <button type="submit" class="btn btn-link" @onclick="() => DeleteInstance(_instance)">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
 
                     }
                     else
                     {
-@*                         <tr> *@
-@*                             <th scope="row">@instance.PresentId</th> *@
-@*                             <td>@instance.Price</td> *@
-@*                             <td>@instance.Url</td> *@
-@*                             <td> *@
-@*                                 <button type="button" class="btn btn-link" @onclick="() => EnableEditing(true, instance)"> *@
-@*                                    Edit *@
-@*                                 </button> *@
-@*                             </td> *@
-@*                         </tr> *@
+                         <tr>
+                             <th scope="row">@instance.PresentId</th>
+                             <td>@instance.Price</td>
+                             <td><a href="@instance.Url">Link to Item</a></td>
+                             <td>
+                                 @* <button type="button" class="btn btn-link" @onclick="() => EnableEditing(true, instance)"> *@
+                                 @*    Edit *@
+                                 @* </button> *@
+                                 <button type="submit" class="btn btn-link" @onclick="() => DeleteInstance(_instance)">
+                                     Delete
+                                 </button>
+                             </td>
+                         </tr>
                     }
                 }
             }
@@ -75,8 +154,12 @@
 
         @functions
         {
-            private PresentModel _presentModel = new PresentModel();
+            public string IdentityName;
+            public string newPresent_Price;
+            public string newPresent_Url;
             
+            private PresentModel _presentModel = new PresentModel();
+
             public List<PresentModel> LoadFormData(String _identityName)
             {
                 User _userName = null;
@@ -123,6 +206,32 @@
             {
             // Debug.WriteLine("Called EnableEditing");
                 instanceData.IsEditing = flag;
+            }
+
+            private void NewPresent()
+            {
+                using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
+                {
+                    var User = c.Users.Where(u => u.Email == IdentityName).FirstOrDefault();
+                    Present newPresent = new Present()
+                    {
+                        Price = newPresent_Price,
+                        Url = newPresent_Url
+                    };
+                    c.Presents.Add(newPresent);
+                    c.SaveChanges();
+                }
+            }
+            
+            private void DeleteInstance(PresentModel instanceData)
+            {
+                Present _present = null;
+                using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
+                {
+                    _present = c.Presents.Where(i => i.PresentId == instanceData.PresentId).FirstOrDefault();
+                    c.Presents.Remove(_present);
+                    c.SaveChanges();
+                }
             }
 
             private void UpdateInstance(PresentModel instanceData)
