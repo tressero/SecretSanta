@@ -1,0 +1,168 @@
+﻿@using SecretSanta.Models
+@using Microsoft.EntityFrameworkCore
+@using System.Linq
+@using Newtonsoft.Json
+@using System.Diagnostics
+@using System.ComponentModel.Design.Serialization
+@using System.Reflection
+@using Microsoft.AspNetCore.Mvc.RazorPages
+@using Microsoft.CodeAnalysis.Differencing
+@using SecretSanta.Models
+
+<AuthorizeView>
+    <Authorized>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Price</th>
+                    <th>Url</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+            @{
+                var _identityName = context.User.Identity.Name;
+                var _presentObjs = LoadFormData(_identityName);
+
+                int x = 123;
+                @foreach (var instance in _presentObjs)
+                {
+                    x += 1;
+                    if (instance.IsEditing)
+                    {
+                            <tr>
+                                <EditForm Model="_presentModel" @*OnValidSubmit="ValidateFields()"*@ Context="@x">
+                                        <DataAnnotationsValidator />
+                                        <ValidationSummary />
+                                    <th scope="row">@instance.PresentId</th>
+                                    <td>
+                                        <input @bind-value="instance.Price" @bind:event="oninput" type="text" class="form-control" placeholder="Give the present a price (approx)."/>
+                                    </td>
+                                    <td>
+                                        <input @bind-value="instance.Url" type="text" class="form-control" placeholder="Link out to a URL of the present."/>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-link" @onclick="() => EnableEditing(false, instance)">
+                                            Edit
+                                        </button>
+                                        <button type="submit" class="btn btn-link" @onclick="() => UpdateInstance(instance)">
+                                            Update
+                                        </button>
+                                    </td>
+                                </EditForm>
+                            </tr>
+
+                    }
+                    else
+                    {
+@*                         <tr> *@
+@*                             <th scope="row">@instance.PresentId</th> *@
+@*                             <td>@instance.Price</td> *@
+@*                             <td>@instance.Url</td> *@
+@*                             <td> *@
+@*                                 <button type="button" class="btn btn-link" @onclick="() => EnableEditing(true, instance)"> *@
+@*                                    Edit *@
+@*                                 </button> *@
+@*                             </td> *@
+@*                         </tr> *@
+                    }
+                }
+            }
+            </tbody>
+        </table>
+
+
+        @functions
+        {
+            private PresentModel _presentModel = new PresentModel();
+            
+            public List<PresentModel> LoadFormData(String _identityName)
+            {
+                User _userName = null;
+                IQueryable<Present> _presents = null;
+
+                List<PresentModel> _presentObjs = new List<PresentModel>();
+
+                using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
+                {
+                    _userName = c.Users.Where(u => u.Email == _identityName).FirstOrDefault();
+
+                    if (_userName == null)
+                    {
+                        _userName = new User()
+                        {
+                            Email = _identityName,
+                            FirstName = "AFirstName",
+                            LastName = "ALastName",
+                        };
+                        c.Users.Add(_userName);
+                        c.SaveChanges();
+                        _userName = c.Users.Where(u => u.Email == _identityName).FirstOrDefault();
+                    }
+                    else
+                    {
+                        _presents = c.Presents.Where(i => i.User.UserId == _userName.UserId);
+
+                        foreach (var present in _presents)
+                        {
+                            _presentObjs.Add(new PresentModel()
+                            {
+                                PresentId = present.PresentId,
+                                Price = present.Price,
+                                Url = present.Url,
+                                IsEditing = true
+                            });
+                        }
+                    }
+                }
+                return _presentObjs;
+            }
+
+            private void EnableEditing(bool flag, PresentModel instanceData)
+            {
+            // Debug.WriteLine("Called EnableEditing");
+                instanceData.IsEditing = flag;
+            }
+
+            private void UpdateInstance(PresentModel instanceData)
+            {
+            // Debug.WriteLine("Called UpdateInstance");
+
+                Present _present = null;
+                using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
+                {
+                    _present = c.Presents.Where(i => i.PresentId == instanceData.PresentId).FirstOrDefault();
+
+                    if (_present.PresentId != instanceData.PresentId)
+                        _present.PresentId = instanceData.PresentId;
+                    if (_present.Date != instanceData.Date)
+                        _present.Date = instanceData.Date;
+                    if (_present.Price != instanceData.Price)
+                        _present.Price = instanceData.Price;
+                    if (_present.Url != instanceData.Url)
+                        _present.Url = instanceData.Url;
+
+                    c.SaveChanges();
+                }
+            }
+
+
+            // private EventCallback ValidateFields()
+            // {
+            //     throw new NotImplementedException();
+            // }
+        }
+
+
+
+
+
+
+    </Authorized>
+    <NotAuthorized>
+        <a href="Identity/Account/Register"> Register </a>
+        <a href="Identity/Account/Login"> Log in</a>
+    </NotAuthorized>
+</AuthorizeView>
+
