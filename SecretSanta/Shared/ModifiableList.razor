@@ -212,11 +212,12 @@
             {
                 using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
                 {
-                    var User = c.Users.Where(u => u.Email == IdentityName).FirstOrDefault();
+                    var user = c.Users.Where(u => u.Email == IdentityName).FirstOrDefault();
                     Present newPresent = new Present()
                     {
                         Price = newPresent_Price,
-                        Url = newPresent_Url
+                        Url = newPresent_Url,
+                        User = user
                     };
                     c.Presents.Add(newPresent);
                     c.SaveChanges();

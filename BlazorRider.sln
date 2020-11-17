@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp", "BlazorApp\Blaz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretSanta", "SecretSanta\SecretSanta.csproj", "{D24D0233-F7AC-4EA5-AAFA-794CE21912D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "Identity\Identity.csproj", "{9D75C8F7-98B0-4B97-9AA2-9CCDF646C9A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{D24D0233-F7AC-4EA5-AAFA-794CE21912D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D24D0233-F7AC-4EA5-AAFA-794CE21912D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D24D0233-F7AC-4EA5-AAFA-794CE21912D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D75C8F7-98B0-4B97-9AA2-9CCDF646C9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D75C8F7-98B0-4B97-9AA2-9CCDF646C9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D75C8F7-98B0-4B97-9AA2-9CCDF646C9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D75C8F7-98B0-4B97-9AA2-9CCDF646C9A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
