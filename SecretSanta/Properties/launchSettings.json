@@ -18,7 +18,7 @@
     "SecretSanta": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://secretsanta.ochsners.us",
+      "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
