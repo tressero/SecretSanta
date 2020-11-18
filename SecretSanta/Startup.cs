@@ -30,8 +30,103 @@ namespace SecretSanta
         
         public DbContextOptionsBuilder ContextOptions { get; set; }
 
+        public void PointSecretSantas()
+        {
+            var users = new List<User>();
+            var usedUsers = new List<int>();
+            var rand = new Random();
+            using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
+            {
+                Console.WriteLine("Starting the Secret Santa Selection");
+                users = c.Users.ToList();
+
+                var couple1 = users.Where(u => (u.UserId == 50 || u.UserId == 53)).ToList();
+                var couple2 = users.Where(u => (u.UserId == 57 || u.UserId == 60)).ToList();
+                var couple3 = users.Where(u => (u.UserId == 51 || u.UserId == 52)).ToList();
+
+                // Couple 1
+                while (new[]{-1,0,50,53}.Any(x => x == couple1[0].RecipientId)
+                       || usedUsers.Any(x=> x == couple1[0].RecipientId))
+                {
+                    if (couple1[0].RecipientId == 0)
+                        couple1[0].RecipientId = rand.Next(50, 61);
+                }
+                usedUsers.Add(couple1[0].RecipientId);
+                while (new[]{-1,0,50,53}.Any(x => x == couple1[1].RecipientId)
+                       || usedUsers.Any(x=> x == couple1[1].RecipientId))
+                {
+                    if (couple1[1].RecipientId == 0)
+                        couple1[1].RecipientId = rand.Next(50, 61);
+                }
+                usedUsers.Add(couple1[1].RecipientId);
+
+                
+                // Couple 2
+                while (new[]{-1,0,57,60}.Any(x => x == couple2[0].RecipientId)
+                       || usedUsers.Any(x=> x == couple2[0].RecipientId))
+                {
+                    if (couple2[0].RecipientId == 0)
+                        couple2[0].RecipientId = rand.Next(50, 61);
+                }
+                usedUsers.Add(couple2[0].RecipientId);
+
+                while (new[]{-1,0,57,60}.Any(x => x == couple2[1].RecipientId) 
+                        || usedUsers.Any(x=> x == couple2[1].RecipientId))
+                {
+                    if (couple2[1].RecipientId == 0)
+                        couple2[1].RecipientId = rand.Next(50, 61);
+                }
+                usedUsers.Add(couple2[1].RecipientId);
+
+                
+                // Couple 3
+                while (new[]{-1,0,51,52}.Any(x => x == couple3[0].RecipientId)
+                        && usedUsers.Any(x=> x == couple3[0].RecipientId))
+                {
+                    if (couple3[0].RecipientId == 0)
+                        couple3[0].RecipientId = rand.Next(50, 61);
+                }
+                usedUsers.Add(couple3[0].RecipientId);
+
+                while (new[]{-1,0,51,52}.Any(x => x == couple3[1].RecipientId)
+                       && usedUsers.Any(x=> x == couple3[1].RecipientId))
+                {
+                    if (couple3[1].RecipientId == 0)
+                        couple3[1].RecipientId = rand.Next(50, 61);
+                }
+                usedUsers.Add(couple3[1].RecipientId);
+
+
+                var singleUsersLeft = c.Users.Where(u => u.RecipientId == 0);
+                Console.WriteLine("Single users left");
+                foreach (var user in singleUsersLeft)
+                {
+                    while (new[] {-1, 0}.Any(x => x == user.RecipientId)
+                           && usedUsers.Any(x => x == user.RecipientId))
+                    {
+                        if (user.RecipientId == 0)
+                            user.RecipientId = rand.Next(50, 61);
+                    }
+                }
+
+                // 50 != 53
+                // 57 != 60
+                // 51 != 52
+                Console.WriteLine(users.Count);
+                Console.WriteLine(users[0].Email);
+
+                Console.WriteLine("End Results");
+                foreach (var user in users)
+                {
+                    Console.WriteLine(user.UserId + " " + user.RecipientId + " " + user.Email);
+                }
+
+                c.SaveChanges();
+            }
+        }
         public Startup(IConfiguration configuration, IHostEnvironment environment)
         {
+            PointSecretSantas();
             // Copied from https://stackoverflow.com/questions/61401282/how-to-read-windows-environment-variables-on-dotnet-core
             Environment = environment;
             Configuration = configuration;
@@ -82,10 +177,10 @@ namespace SecretSanta
                 options.SlidingExpiration = true;
             });
 
-            services.Configure<ForwardedHeadersOptions>(opt =>
-            {
-                opt.KnownProxies.Add(IPAddress.Parse("127.0.0.1"));
-            });
+             services.Configure<ForwardedHeadersOptions>(opt =>
+             {
+                 opt.KnownProxies.Add(IPAddress.Parse("127.0.0.1"));
+             });
             
             services.AddServerSideBlazor();
             services
@@ -96,12 +191,12 @@ namespace SecretSanta
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //if (env.IsDevelopment())
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
             }
-            //else
+            else
             {
                 //app.UseExceptionHandler("/Error");
 
