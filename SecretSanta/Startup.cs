@@ -41,8 +41,11 @@ namespace SecretSanta
                 users = c.Users.ToList();
 
                 var couple1 = users.Where(u => (u.UserId == 50 || u.UserId == 53)).ToList();
+                Console.WriteLine(couple1.Count);
                 var couple2 = users.Where(u => (u.UserId == 57 || u.UserId == 60)).ToList();
+                Console.WriteLine(couple2.Count);
                 var couple3 = users.Where(u => (u.UserId == 51 || u.UserId == 52)).ToList();
+                Console.WriteLine(couple3.Count);
 
                 // Couple 1
                 while (new[]{-1,0,50,53}.Any(x => x == couple1[0].RecipientId)
@@ -52,7 +55,7 @@ namespace SecretSanta
                         couple1[0].RecipientId = rand.Next(50, 61);
                 }
                 usedUsers.Add(couple1[0].RecipientId);
-                while (new[]{-1,0,50,53}.Any(x => x == couple1[1].RecipientId)
+                while (new List<int>(){-1,0,50,53}.Any(x => x == couple1[1].RecipientId)
                        || usedUsers.Any(x=> x == couple1[1].RecipientId))
                 {
                     if (couple1[1].RecipientId == 0)
@@ -126,7 +129,7 @@ namespace SecretSanta
         }
         public Startup(IConfiguration configuration, IHostEnvironment environment)
         {
-            PointSecretSantas();
+            //PointSecretSantas();
             // Copied from https://stackoverflow.com/questions/61401282/how-to-read-windows-environment-variables-on-dotnet-core
             Environment = environment;
             Configuration = configuration;

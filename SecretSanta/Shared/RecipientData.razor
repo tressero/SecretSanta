@@ -1,0 +1,54 @@
+@using SecretSanta.Models
+@using Microsoft.EntityFrameworkCore
+@using System.Linq
+@using Newtonsoft.Json
+@using System.Diagnostics
+@using System.ComponentModel.Design.Serialization
+@using System.Reflection
+@using Microsoft.AspNetCore.Mvc.RazorPages
+@using Microsoft.CodeAnalysis.Differencing
+@using SecretSanta.Models
+
+<AuthorizeView>
+    <Authorized>
+       
+            @{
+              var identityName = context.User.Identity.Name;
+              <h2>hello, @identityName</h2>
+               var myUser = GetMyUser(identityName);
+                 var recipientUser = GetRecipientUser(myUser.RecipientId);
+               <h3>You have: @recipientUser.Email</h3>
+            }
+              
+        @functions
+        {
+          private User GetMyUser(string IdentityName)
+          {
+            using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
+            {
+              var myUser = c.Users.First(x => x.Email == IdentityName);
+                return myUser;
+            }
+          }
+        private User GetRecipientUser(int myUser_recipientId)
+        {
+            using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
+            {
+                var recipientUser = c.Users.FirstOrDefault(x => x.UserId == myUser_recipientId);
+                return recipientUser;
+            }
+        }
+     
+        }
+
+
+
+
+
+
+    </Authorized>
+    <NotAuthorized>
+        <p> You are not authorized to view this top secret data :(</p>
+    </NotAuthorized>
+</AuthorizeView>
+

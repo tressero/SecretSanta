@@ -9,6 +9,15 @@
 
 <p>This component demonstrates fetching a target user and their associated presents they're interested in.</p>
 
+<AuthorizeView>
+    <Authorized>
+        <RecipientData/>
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not a part of this Secret Santa game, sorry!</p>
+    </NotAuthorized>
+</AuthorizeView>
+
 @if (_presents == null)
 {
     <p>
@@ -38,7 +47,9 @@ else
     </table>
 }
 
-@code {
+@functions {
+    public string IdentityName { get; set; }
+    public string RecipientName { get; set; }
     private User _myUser;
     private User _recipientUser;
     private List<Present> _presents;
@@ -47,7 +58,7 @@ else
     {
         GetPresents();
     }
-
+    
     private void GetPresents()
     {
         using (var context = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
