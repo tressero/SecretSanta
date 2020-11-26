@@ -7,22 +7,59 @@
 @using System.Reflection
 @using Microsoft.AspNetCore.Mvc.RazorPages
 @using Microsoft.CodeAnalysis.Differencing
+@using Microsoft.EntityFrameworkCore.Metadata
 @using SecretSanta.Models
 
 <AuthorizeView>
     <Authorized>
        
             @{
-              var identityName = context.User.Identity.Name;
-              <h2>hello, @identityName</h2>
-               var myUser = GetMyUser(identityName);
-                 var recipientUser = GetRecipientUser(myUser.RecipientId);
-               <h3>You have: @recipientUser.Email</h3>
+                var identityName = context.User.Identity.Name;
+                <h2>hello, @identityName</h2>
+                User myUser = null;
+
+                using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
+                {
+                    myUser = c.Users.First(x => x.Email == identityName);
+                }
+                var recipientUser = GetRecipientUser(myUser.RecipientId);
+                RecipientEmail = recipientUser.Email;
+                <h3>You have: @RecipientEmail</h3>
+                                                  
             }
+                                                  
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Price</th>
+                <th>Url</th>
+            </tr>
+            </thead>
+            
+            
+            <tbody>
+            @{
+                var _presentObjs = LoadFormData(RecipientEmail);
+    
+                @foreach (var instance in _presentObjs)
+                {
+                    var _instance = instance;
+                        <tr>
+                            <th scope="row">@instance.PresentId</th>
+                            <td>@instance.Price</td>
+                            <td><a href="@instance.Url">Link to Item</a></td>
+                        </tr>
+                }
+            }
+            </tbody>
+        </table>
               
         @functions
         {
-          private User GetMyUser(string IdentityName)
+            public string RecipientEmail;
+            
+            private User GetMyUser(string IdentityName)
           {
             using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
             {
@@ -38,14 +75,49 @@
                 return recipientUser;
             }
         }
+            public List<PresentModel> LoadFormData(String _identityName)
+            {
+                User _userName = null;
+                IQueryable<Present> _presents = null;
+
+                List<PresentModel> _presentObjs = new List<PresentModel>();
+
+                using (var c = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
+                {
+                    _userName = c.Users.Where(u => u.Email == _identityName).FirstOrDefault();
+
+                    if (_userName == null)
+                    {
+                        _userName = new User()
+                        {
+                            Email = _identityName,
+                            FirstName = "AFirstName",
+                            LastName = "ALastName",
+                        };
+                        c.Users.Add(_userName);
+                        c.SaveChanges();
+                        _userName = c.Users.Where(u => u.Email == _identityName).FirstOrDefault();
+                    }
+                    else
+                    {
+                        _presents = c.Presents.Where(i => i.User.UserId == _userName.UserId);
+
+                        foreach (var present in _presents)
+                        {
+                            _presentObjs.Add(new PresentModel()
+                            {
+                                PresentId = present.PresentId,
+                                Price = present.Price,
+                                Url = present.Url,
+                                IsEditing = true
+                            });
+                        }
+                    }
+                }
+                return _presentObjs;
+            }
      
         }
-
-
-
-
-
-
     </Authorized>
     <NotAuthorized>
         <p> You are not authorized to view this top secret data :(</p>
