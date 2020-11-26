@@ -2,8 +2,6 @@
 
 @using SecretSanta.Models
 @using Microsoft.EntityFrameworkCore
-@* @inject User User *@
-@* @inject Present Present *@
 
 <h1>Recipient</h1>
 
@@ -18,69 +16,28 @@
     </NotAuthorized>
 </AuthorizeView>
 
-@if (_presents == null)
-{
-    <p>
-        <em>Loading...</em>
-    </p>
-}
-else
-{
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Date Added</th>
-            <th>Price</th>
-            <th>Url</th>
-        </tr>
-        </thead>
-        <tbody>
-@*         @foreach (var present in _presents) *@
+
+@* @functions { *@
+@*     public string IdentityName { get; set; } *@
+@*     public string RecipientName { get; set; } *@
+@*     private User _myUser; *@
+@*     private User _recipientUser; *@
+@*     private List<Present> _presents; *@
+@* *@
+@*     protected override async Task OnInitializedAsync() *@
+@*     { *@
+@*         GetPresents(); *@
+@*     } *@
+@*      *@
+@*     private void GetPresents() *@
+@*     { *@
+@*         using (var context = new SecretSantaContext(new DbContextOptions<SecretSantaContext>())) *@
 @*         { *@
-@*             <tr> *@
-@*                 <td>@present.Date.ToShortDateString()</td> *@
-@*                 <td>@present.Price</td> *@
-@*                 <td><a href="@present.Url">Link to Item here</a></td> *@
-@*             </tr> *@
+@*             _presents = context.Presents *@
+@*                         .OrderBy(b => b.User) *@
+@*                         .ToList();             *@
 @*         } *@
-        </tbody>
-    </table>
-}
+@*     } *@
+@* *@
+@* } *@
 
-@functions {
-    public string IdentityName { get; set; }
-    public string RecipientName { get; set; }
-    private User _myUser;
-    private User _recipientUser;
-    private List<Present> _presents;
-
-    protected override async Task OnInitializedAsync()
-    {
-        GetPresents();
-    }
-    
-    private void GetPresents()
-    {
-        using (var context = new SecretSantaContext(new DbContextOptions<SecretSantaContext>()))
-        {
-            _presents = context.Presents
-                        .OrderBy(b => b.User)
-                        .ToList();            
-        }
-    }
-
-}
-
-@*
- using (var db = new SecretSantaContext())
-            {
-                // Create Users
-                Console.WriteLine("Inserting new users");
-                db.Add(new User
-                {
-                    FirstName = "Marc",
-                    LastName = "Ochsner",
-                    Email = "testemail@gmail.com",
-                    RecipientId = 11
-                });
-*@
